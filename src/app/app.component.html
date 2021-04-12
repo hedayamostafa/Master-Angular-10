@@ -1,15 +1,9 @@
 <app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
-<!--  <app-cockpit
-    (serverCreated) = "onServerAdded($event)"
-    (blueprintCreated) = "onBlueprintAdded($event)"
-  ></app-cockpit>-->
   <div class="row">
     <div class="col-xs-12">
       <app-recipes *ngIf="loadedFeature === 'recipe' "></app-recipes>
       <app-shopping-list *ngIf="loadedFeature !== 'recipe' "></app-shopping-list>
-<!--      <app-server-element  *ngFor="let serverElement of serverElements"
-             [srvElement]="serverElement"></app-server-element>-->
     </div>
   </div>
 </div>
